@@ -16,10 +16,14 @@ const binarySearch = (nums, target) => {
     let start = 0;
     let end = nums.length - 1;
 
+    // just in case a infinite loop, the two element left after while is start and end
     while (start + 1 < end) {
         let mid = start + Math.floor((end - start) / 2);
 
         if (nums[mid] === target) {
+            // Find the first position
+            // start = mid; if you want to find the last position
+            // return mid; if you just want to find any
             end = mid;
         } else if (nums[mid] < target) {
             start = mid;
@@ -28,6 +32,7 @@ const binarySearch = (nums, target) => {
         }
     }
 
+    // put nums[end] === target first if you want to find last position
     if (nums[start] === target) {
         return start;
     }
