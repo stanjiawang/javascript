@@ -1,6 +1,6 @@
 /* https://www.lintcode.com/problem/14
 *
-* First Position of Target
+* 14. First Position of Target
 *
 * Description
 * Given a sorted array (ascending order) and a target number,
